@@ -1,0 +1,261 @@
+/* Página pessoal - Bruna Gama */
+
+/* geral */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fdfbf7;
+  color: #4a443f;
+}
+
+/* cabeçalho */
+header {
+  background-color: #4a443f;
+  color: #fdfbf7;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* menu */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #fdfbf7;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #a36b5e;
+  color: white;
+}
+
+/* conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: white;
+  border: 1px solid #e8e2da;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+/* títulos */
+h2 {
+  color: #a36b5e;
+  margin-bottom: 15px;
+}
+
+/* detalhe decorativo nos títulos */
+h2::before {
+  content: "\2756"; /* símbolo decorativo */
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* links */
+main a {
+  color: #a36b5e;
+}
+
+main a:hover {
+  color: #4a443f;
+}
+
+/* sobre mim (imagem e texto lado a lado) */
+.perfil {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.perfil img {
+  width: 200px;
+  height: auto;
+  border: 3px solid #a36b5e;
+  border-radius: 10px;
+}
+
+/* tabela do horário */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #cfc7bd;
+  padding: 10px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #4a443f;
+  color: #fdfbf7;
+}
+
+/* hora sempre numa linha só */
+th:first-child,
+td:first-child {
+  white-space: nowrap;
+}
+
+/* formulário */
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #cfc7bd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #a36b5e;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #4a443f;
+}
+
+.voltar {
+  margin-top: 20px;
+}
+
+/* rodapé */
+footer {
+  background-color: #4a443f;
+  color: #fdfbf7;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* ---------- responsividade ---------- */
+
+/* mobile (até 767px) */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 3px 0;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* tablet (768px até 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 0 25px;
+  }
+
+  .perfil img {
+    width: 180px;
+  }
+}
+
+/* desktop (a partir de 1024px) */
+@media (min-width: 1024px) {
+  header {
+    padding: 35px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  main {
+    margin: 40px auto;
+  }
+
+  .perfil img {
+    width: 240px;
+  }
+
+  th,
+  td {
+    padding: 14px;
+  }
+}
